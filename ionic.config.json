@@ -3,6 +3,10 @@
   "integrations": {
     "cordova": {}
   },
+  "hooks": {
+    "serve:before": "./serve-build-before.js",
+    "build:before": "./serve-build-before.js"
+  },
   "type": "angular",
   "id": "d5b2936e"
 }

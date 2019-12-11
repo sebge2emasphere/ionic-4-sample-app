@@ -1,15 +1,17 @@
 {
-  "name": "photo-rc1",
+  "name": "HelloWorld",
   "version": "0.0.1",
-  "author": "Ionic Framework",
-  "homepage": "http://ionicframework.com/",
+  "author": "EMAsphere SA",
+  "homepage": "http://emasphere.com",
   "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e"
+    "start-local": "ionic serve -- -c=local",
+    "start-dev": "ionic serve -- -c=dev",
+    "start-test": "ionic serve -- -c=test",
+    "start-preprod": "ionic serve -- -c=preprod",
+
+    "start": "ionic serve -- -c=${BUILD_ENV}",
+
+    "build": "ionic build -- -c=${BUILD_ENV}"
   },
   "private": true,
   "dependencies": {
@@ -26,6 +28,7 @@
     "@ionic-native/status-bar": "^5.15.1",
     "@ionic/angular": "^4.11.1",
     "@ionic/storage": "^2.2.0",
+    "cordova": "^9.0.0",
     "cordova-android": "8.1.0",
     "cordova-ios": "5.0.1",
     "cordova-plugin-camera": "~4.1.0",
@@ -37,6 +40,7 @@
     "cordova-plugin-whitelist": "^1.3.4",
     "cordova-sqlite-storage": "^3.4.0",
     "core-js": "^3.3.2",
+    "cross-env-default": "^5.1.3-1",
     "rxjs": "~6.5.3",
     "zone.js": "^0.10.2"
   },
@@ -50,10 +54,12 @@
     "@angular/compiler-cli": "~8.2.11",
     "@angular/language-service": "~8.2.11",
     "@ionic/angular-toolkit": "^2.0.0",
+    "@ionic/lab": "2.0.18",
     "@types/jasmine": "^3.4.4",
     "@types/jasminewd2": "^2.0.8",
     "@types/node": "^12.11.1",
     "codelyzer": "~5.1.2",
+    "cross-env": "^6.0.3",
     "jasmine-core": "~3.5.0",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~4.4.1",
@@ -66,10 +72,12 @@
     "tslint": "~5.20.0",
     "typescript": "~3.4.3"
   },
-  "description": "An Ionic project",
+  "description": "Yet Another Hello World Project",
   "cordova": {
     "plugins": {
-      "cordova-plugin-camera": {},
+      "cordova-plugin-camera": {
+        "ANDROID_SUPPORT_V4_VERSION": "27.+"
+      },
       "cordova-plugin-whitelist": {},
       "cordova-plugin-statusbar": {},
       "cordova-plugin-device": {},

@@ -1,3 +1,4 @@
 export const environment = {
-  production: false
+  name: 'prod',
+  url: 'http://ema.emasphere.com'
 };
