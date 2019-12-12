@@ -5,7 +5,6 @@ module.exports = function () {
 
     const buildDirectory = 'build/resources/';
 
-
     function isDirectory(pathItem) {
         try {
             return fs.statSync(pathItem).isDirectory();

@@ -4,9 +4,10 @@
   "author": "EMAsphere SA",
   "homepage": "http://emasphere.com",
   "scripts": {
-    "start-local": "cross-env EMA_API_SERVER=http://localhost:8108 serve -- -c=local-serve -- --proxy-config proxy.conf.js",
-    "start-dev": "cross-env EMA_API_SERVER=http://ema-mobile-gateway-dev.eu-central-1.elasticbeanstalk.com ionic serve -- -c=local-serve -- --proxy-config proxy.conf.js",
+    "serve-local": "cross-env EMA_API_SERVER=http://localhost:8108 ionic serve -- -c=local-serve -- --proxy-config proxy.conf.js",
+    "serve-dev": "cross-env EMA_API_SERVER=http://ema-mobile-gateway-dev.eu-central-1.elasticbeanstalk.com ionic serve -- -c=local-serve -- --proxy-config proxy.conf.js",
     "run-android-emulator-dev": "ionic cordova run android  -c=dev",
+    "run-android-emulator-local": "ionic cordova run android  -c=local",
     "build": "ionic build -- -c=${BUILD_ENV}"
   },
   "private": true,
