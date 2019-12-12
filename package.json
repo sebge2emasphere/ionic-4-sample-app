@@ -6,7 +6,7 @@
   "scripts": {
     "start-local": "cross-env EMA_API_SERVER=http://localhost:8108 serve -- -c=local-serve -- --proxy-config proxy.conf.js",
     "start-dev": "cross-env EMA_API_SERVER=http://ema-mobile-gateway-dev.eu-central-1.elasticbeanstalk.com ionic serve -- -c=local-serve -- --proxy-config proxy.conf.js",
-
+    "run-android-emulator-dev": "ionic cordova run android  -c=dev",
     "build": "ionic build -- -c=${BUILD_ENV}"
   },
   "private": true,

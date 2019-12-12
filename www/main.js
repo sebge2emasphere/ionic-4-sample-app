@@ -663,8 +663,8 @@ var __importDefault = (undefined && undefined.__importDefault) || function (mod)
   return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 var environment = {
-    name: 'local',
-    url: 'http://localhost:8099'
+    name: 'dev',
+    url: 'http://dev.emasphere.com'
 };
 
 
@@ -690,7 +690,7 @@ var __importDefault = (undefined && undefined.__importDefault) || function (mod)
 
 
 
-if (_environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].name = 'prod') {
+if (_environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].name === 'prod') {
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["enableProdMode"])();
 }
 Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformBrowserDynamic"])().bootstrapModule(_app_app_module__WEBPACK_IMPORTED_MODULE_2__["AppModule"])

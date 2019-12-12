@@ -171,7 +171,23 @@
           "options": {
             "browserTarget": "app:build"
           },
-          "configurations": {}
+          "configurations": {
+            "local": {
+              "browserTarget": "app:build:local"
+            },
+            "dev": {
+              "browserTarget": "app:build:dev"
+            },
+            "test": {
+              "browserTarget": "app:build:test"
+            },
+            "preprod": {
+              "browserTarget": "app:build:preprod"
+            },
+            "prod": {
+              "browserTarget": "app:build:prod"
+            }
+          }
         },
         "ionic-cordova-serve": {
           "builder": "@ionic/angular-toolkit:cordova-serve",
