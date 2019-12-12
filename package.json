@@ -4,12 +4,8 @@
   "author": "EMAsphere SA",
   "homepage": "http://emasphere.com",
   "scripts": {
-    "start-local": "ionic serve -- -c=local",
-    "start-dev": "ionic serve -- -c=dev",
-    "start-test": "ionic serve -- -c=test",
-    "start-preprod": "ionic serve -- -c=preprod",
-
-    "start": "ionic serve -- -c=${BUILD_ENV}",
+    "start-local": "cross-env EMA_API_SERVER=http://localhost:8108 serve -- -c=local-serve -- --proxy-config proxy.conf.js",
+    "start-dev": "cross-env EMA_API_SERVER=http://ema-mobile-gateway-dev.eu-central-1.elasticbeanstalk.com ionic serve -- -c=local-serve -- --proxy-config proxy.conf.js",
 
     "build": "ionic build -- -c=${BUILD_ENV}"
   },

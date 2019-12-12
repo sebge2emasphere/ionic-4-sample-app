@@ -20,7 +20,7 @@ export class Tab2Page {
         let headers = new HttpHeaders();
         headers = headers.append('Authorization', 'Basic ' + btoa(this.username + ':' + this.password));
 
-        this.httpClient.get(environment.url + '/login-api', {'headers': headers})
+        this.httpClient.get(environment.url + '/api/v1/user', {'headers': headers})
             .toPromise()
             .then(result => {
                 console.log(result);
